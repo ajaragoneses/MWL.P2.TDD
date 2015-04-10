@@ -56,6 +56,10 @@ public class WasteToFoundationMoveTest {
 	}
 	
 	
-	
+	@Test
+	public void WasteSizeAfterMoveTest(){
+		waste.moveTopToFoundation(foundations.get(1));
+		assertEquals(2, foundations.get(1).size());
+	}
 	
 }

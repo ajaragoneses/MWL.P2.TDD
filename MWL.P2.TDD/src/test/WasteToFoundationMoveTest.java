@@ -13,12 +13,12 @@ public class WasteToFoundationMoveTest {
 	public void init(){
 		Waste waste = new Waste();
 		Deck deck = new Deck();
+		deck.moveToWaste();
 	}
 	
 	@Test
 	public void WasteNotEmptyTest() {
-		deck.moveToWaste();
-		assertTrue(waste.isWasteToFoundationPermited());
+		assertTrue(waste.isWasteGetCardPermited());
 	}
 
 }

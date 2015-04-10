@@ -72,7 +72,7 @@ public class klondikeInitTest {
 			Tableau tableau = tableaus.get(index);
 			for (int i = 0; i < tableau.size()-1; i++){
 	            for (int j = i+1; j < tableau.size(); j++){
-	                if( tableau.get(i).equals(tableau.get(j)) ){
+	                if( tableau.getCard(i).equals(tableau.getCard(j)) ){
 	                	fail("Duplicate element");
 	                }
 	            }

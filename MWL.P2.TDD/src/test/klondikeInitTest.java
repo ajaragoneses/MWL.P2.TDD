@@ -69,7 +69,7 @@ public class klondikeInitTest {
 	public void DeckNotRepeatedCardsTest(){
 		Tableau[] tableaus = tableaus.getTableaus();
 		for(int index = 0; index < tableaus.length ; index++){
-			Tableau tableau = tableaus.get(i);
+			Tableau tableau = tableaus.get(index);
 			for (int i = 0; i < tableau.size()-1; i++){
 	            for (int j = i+1; j < tableau.size(); j++){
 	                if( tableau.get(i).equals(tableau.get(j)) ){

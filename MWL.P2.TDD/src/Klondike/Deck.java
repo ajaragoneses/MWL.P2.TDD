@@ -2,9 +2,9 @@ package Klondike;
 
 public class Deck {
 
-	public Object size() {
+	public int size() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 }

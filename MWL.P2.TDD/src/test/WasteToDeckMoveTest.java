@@ -42,4 +42,10 @@ public class WasteToDeckMoveTest {
 	public void WasteNotEmptyTest() {
 		assertTrue(waste.isWasteGetCardPermited());
 	}
+	
+	@Test
+	public void MoveToDeckIsPermitedTest() {
+		assertTrue(deck.size() == 0);
+	}
+
 }

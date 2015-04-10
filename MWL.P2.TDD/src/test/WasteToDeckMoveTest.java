@@ -47,5 +47,11 @@ public class WasteToDeckMoveTest {
 	public void MoveToDeckIsPermitedTest() {
 		assertTrue(deck.size() == 0);
 	}
+	
+	@Test
+	public void WasteSizeAfterMoveTest(){
+		waste.moveToDeck(deck);
+		assertTrue(waste.size() == 0);
+	}
 
 }

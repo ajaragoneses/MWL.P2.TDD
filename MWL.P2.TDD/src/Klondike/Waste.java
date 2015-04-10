@@ -17,9 +17,9 @@ public class Waste {
 		
 	}
 
-	public Object size() {
+	public int size() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	public void setTopCard(Card card_5) {
@@ -28,6 +28,11 @@ public class Waste {
 	}
 
 	public void addCardOnTop(Card card_5) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void moveToDeck(Deck deck) {
 		// TODO Auto-generated method stub
 		
 	}

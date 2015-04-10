@@ -10,12 +10,14 @@ public class klondikeInitTest {
 	public Deck deck;
 	public Waste waste;
 	public Foundations foundations;
+	public Tableaus tableaus;
 	
 	@BeforeClass
 	public void init(){
 		deck = new Deck();
 		waste = new Waste();
 		foundations = new Foundations();
+		tableaus = new Tableaus();
 	}
 
 	@Test
@@ -31,9 +33,18 @@ public class klondikeInitTest {
 
 	@Test
 	public void FoundationsSizeTest(){
-		int[] foundationsSizes = foundations.getFoundationsSize();
+		int[] foundationsSizes = foundations.getFoundationsSizes();
 		for(int foundationSize : foundationsSizes){
 			assertEquals(0, foundationSize);
 		}
 	}
+	
+	@Test
+	public void TableausSizeTest(){
+		int[] tableausSizes = tableaus.getTableausSizes();
+		for(int i = 0; i < tableausSizes.length ; i++){
+			assertEquals(i+1, tableausSizes[i]);
+		}
+	}
+	
 }

@@ -27,4 +27,9 @@ public class Waste {
 		
 	}
 
+	public void addCardOnTop(Card card_5) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

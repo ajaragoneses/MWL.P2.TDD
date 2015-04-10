@@ -1,11 +1,16 @@
 package test;
 
 import static org.junit.Assert.*;
-
-import java.util.Random;
-
 import org.junit.Before;
 import org.junit.Test;
+import Klondike.Card;
+import Klondike.Color;
+import Klondike.Deck;
+import Klondike.Foundation;
+import Klondike.Foundations;
+import Klondike.Palo;
+import Klondike.Valor;
+import Klondike.Waste;
 
 public class WasteToFoundationMoveTest {
 
@@ -20,10 +25,10 @@ public class WasteToFoundationMoveTest {
 		foundations = new Foundations();
 		
 		Card card_1 = new Card(Color.ROJO, Palo.ROMBOS, Valor.Q);
-		Card card_2 = new Card(Color.NEGRO, Palo.PICAS, Valor.3);
-		Card card_3 = new Card(Color.ROJO, Palo.CORAZONES, Valor.7);
+		Card card_2 = new Card(Color.NEGRO, Palo.PICAS, Valor.TRES);
+		Card card_3 = new Card(Color.ROJO, Palo.CORAZONES, Valor.SIETE);
 		Card card_4 = new Card(Color.NEGRO, Palo.PICAS, Valor.K);
-		Card card_5 = new Card(Color.ROJO, Palo.ROMBOS, Valor.4);
+		Card card_5 = new Card(Color.ROJO, Palo.ROMBOS, Valor.CUATRO);
 		
 		foundations.get(0).setTopCard(card_1);
 		foundations.get(1).setTopCard(card_2);
@@ -57,7 +62,7 @@ public class WasteToFoundationMoveTest {
 	
 	
 	@Test
-	public void WasteSizeAfterMoveTest(){
+	public void FoundationSizeAfterMoveTest(){
 		waste.moveTopToFoundation(foundations.get(1));
 		assertEquals(2, foundations.get(1).size());
 	}

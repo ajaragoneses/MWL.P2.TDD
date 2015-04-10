@@ -5,6 +5,12 @@ import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Klondike.Deck;
+import Klondike.Foundations;
+import Klondike.Tableau;
+import Klondike.Tableaus;
+import Klondike.Waste;
+
 public class klondikeInitTest {
 	
 	public Deck deck;
@@ -59,17 +65,17 @@ public class klondikeInitTest {
 	
 	@Test
 	public void TableausFirstDiscoveredTest(){
-		Tableau[] tableaus = tableaus.getTableaus();
-		for(int i = 0; i < tableaus.length ; i++){
-			assertTrue(tableaus.get(i).getTopCard().isDiscovered());
+		Tableau[] tableausArray = tableaus.getTableaus();
+		for(int i = 0; i < tableausArray.length ; i++){
+			assertTrue(tableausArray[i].getTopCard().isDiscovered());
 		}
 	}
 	
 	@Test
 	public void DeckNotRepeatedCardsTest(){
-		Tableau[] tableaus = tableaus.getTableaus();
-		for(int index = 0; index < tableaus.length ; index++){
-			Tableau tableau = tableaus.get(index);
+		Tableau[] tableausArray = tableaus.getTableaus();
+		for(int index = 0; index < tableausArray.length ; index++){
+			Tableau tableau = tableausArray[index];
 			for (int i = 0; i < tableau.size()-1; i++){
 	            for (int j = i+1; j < tableau.size(); j++){
 	                if( tableau.getCard(i).equals(tableau.getCard(j)) ){

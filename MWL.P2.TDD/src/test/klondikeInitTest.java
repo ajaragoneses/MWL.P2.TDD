@@ -10,13 +10,18 @@ public class klondikeInitTest {
 	@BeforeClass
 	public void init(){
 		Deck deck = new Deck();
+		Waste waste = new Waste();
 	}
 
 	@Test
-	public void DeckSizeTest() {
+	public void DeckSizeTest(){
 		assertEquals(24, deck.size());
 	}
 	
+	@Test
+	public void WasteSizeTest(){
+		assertEquals(0, waste.size());
+	}
 	
 
 }

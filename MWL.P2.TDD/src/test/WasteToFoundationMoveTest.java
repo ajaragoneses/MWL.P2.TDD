@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.Random;
 
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
 public class WasteToFoundationMoveTest {
@@ -13,7 +13,7 @@ public class WasteToFoundationMoveTest {
 	public Deck deck;
 	public Foundations foundations;
 	
-	@BeforeClass
+	@Before
 	public void init(){
 		waste = new Waste();
 		deck = new Deck();
@@ -49,4 +49,13 @@ public class WasteToFoundationMoveTest {
 		assertFalse(foundation.isMoveToFoundationPermited(waste.getTopCard()));
 	}
 
+	@Test
+	public void WasteSizeAfterMoveTest(){
+		waste.moveTopToFoundation(foundations.get(1));
+		assertEquals(0, waste.size());
+	}
+	
+	
+	
+	
 }

@@ -54,4 +54,10 @@ public class WasteToDeckMoveTest {
 		assertTrue(waste.size() == 0);
 	}
 
+	@Test
+	public void DeckSizeAfterMoveTest(){
+		waste.moveToDeck(deck);
+		assertTrue(deck.size() == 5);
+	}
+	
 }

@@ -7,10 +7,15 @@ import org.junit.Test;
 
 public class klondikeInitTest {
 	
+	public Deck deck;
+	public Waste waste;
+	public Foundations foundations;
+	
 	@BeforeClass
 	public void init(){
-		Deck deck = new Deck();
-		Waste waste = new Waste();
+		deck = new Deck();
+		waste = new Waste();
+		foundations = new Foundations();
 	}
 
 	@Test
@@ -24,4 +29,11 @@ public class klondikeInitTest {
 	}
 	
 
+	@Test
+	public void FoundationsSizeTest(){
+		int[] foundationsSizes = foundations.getFoundationsSize();
+		for(int foundationSize : foundationsSizes){
+			assertEquals(0, foundationSize);
+		}
+	}
 }

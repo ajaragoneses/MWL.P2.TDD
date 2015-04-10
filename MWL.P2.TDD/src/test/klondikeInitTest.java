@@ -30,6 +30,16 @@ public class klondikeInitTest {
 		assertEquals(0, waste.size());
 	}
 	
+	@Test
+	public void NumberOfFoundationsTest(){
+		assertEquals(4, foundations.size());
+	}
+	
+	@Test
+	public void NumberOfTableausTest(){
+		assertEquals(4, tableaus.size());
+	}
+	
 
 	@Test
 	public void FoundationsSizeTest(){

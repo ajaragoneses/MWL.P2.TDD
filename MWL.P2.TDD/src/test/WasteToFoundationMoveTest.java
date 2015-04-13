@@ -43,7 +43,7 @@ public class WasteToFoundationMoveTest {
 	}
 	
 	@Test
-	public void MoveToFoundationPermited(){
+	public void MoveToFoundationPermitedTest(){
 		Foundation foundation = foundations.get(0);
 		assertFalse(foundation.isMoveToFoundationPermited(waste.getTopCard()));
 		foundation = foundations.get(1);

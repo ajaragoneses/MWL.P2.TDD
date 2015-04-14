@@ -37,4 +37,9 @@ public class Waste {
 		
 	}
 
+	public boolean isDeckGetCardsPermited() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

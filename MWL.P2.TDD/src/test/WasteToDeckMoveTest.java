@@ -17,7 +17,6 @@ public class WasteToDeckMoveTest {
 
 	public Waste waste;
 	public Deck deck;
-	public Foundations foundations;
 	
 	@Before
 	public void init(){

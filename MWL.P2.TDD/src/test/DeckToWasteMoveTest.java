@@ -2,36 +2,56 @@ package test;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
+
+import Klondike.Card;
+import Klondike.Color;
+import Klondike.Deck;
+import Klondike.Foundations;
+import Klondike.Palo;
+import Klondike.Valor;
+import Klondike.Waste;
 
 public class DeckToWasteMoveTest {
 
-	@Test
-	public void WasteNotEmptyTest() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void DeckEmptyTest() {
-		fail("Not yet implemented");
+	public Waste waste;
+	public Deck deck;
+	
+	@Before
+	public void init(){
+		waste = new Waste();
+		deck = new Deck();
+		
+		Card card_1 = new Card(Color.ROJO, Palo.ROMBOS, Valor.Q);
+		Card card_2 = new Card(Color.NEGRO, Palo.PICAS, Valor.TRES);
+		Card card_3 = new Card(Color.ROJO, Palo.CORAZONES, Valor.SIETE);
+		Card card_4 = new Card(Color.NEGRO, Palo.PICAS, Valor.K);
+		Card card_5 = new Card(Color.ROJO, Palo.ROMBOS, Valor.CUATRO);
+		
+		deck.addCardOnTop(card_5);
+		deck.addCardOnTop(card_4);
+		deck.addCardOnTop(card_3);
+		deck.addCardOnTop(card_2);
+		deck.addCardOnTop(card_1);
 	}
 	
-	@Test
-	public void IsMoveWasteToDeckPermitedTest() {
-		fail("Not yet implemented");
-	}
 	
+	@Test
+	public void DeckNotEmptyTest() {
+		assertTrue(waste.isDeckGetCardsPermited());
+	}
 	
 	@Test
 	public void WasteSizeAfterMoveTest(){
-		fail("Not yet implemented");
-//		assertEquals(0, waste.size());
+		deck.moveToWaste(waste);
+		assertTrue(waste.size() == 3);
 	}
-	
-	
+
 	@Test
 	public void DeckSizeAfterMoveTest(){
-		fail("Not yet implemented");		
-//		assertEquals(XXX, deck.size());
+		deck.moveToWaste(waste);
+		assertTrue(deck.size() == 2);
 	}
+
 }

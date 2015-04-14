@@ -44,7 +44,7 @@ public class DeckToWasteMoveTest {
 	
 	@Test
 	public void WasteSizeAfterMoveTest(){
-		waste.moveToDeck(deck);
+		deck.moveToWaste(waste);
 		assertTrue(waste.size() == 3);
 	}
 

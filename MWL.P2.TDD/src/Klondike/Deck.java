@@ -7,4 +7,9 @@ public class Deck {
 		return 0;
 	}
 
+	public void addCardOnTop(Card card) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -2,19 +2,16 @@ package Klondike;
 
 public class Tableaus {
 
-	public Object size() {
-		// TODO Auto-generated method stub
-		return null;
+	public int size() {
+		return 0;
 	}
 
 	public int[] getTableausSizes() {
-		// TODO Auto-generated method stub
-		return null;
+		return new int[]{0};
 	}
 
 	
 	public Tableau[] getTableaus(){
-		// TODO Auto-generated method stub
-		return null;
+		return new Tableau[]{new Tableau()};
 	}
 }

@@ -2,6 +2,7 @@ package test;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -18,7 +19,7 @@ public class klondikeInitTest {
 	public Foundations foundations;
 	public Tableaus tableaus;
 	
-	@BeforeClass
+	@Before
 	public void init(){
 		deck = new Deck();
 		waste = new Waste();

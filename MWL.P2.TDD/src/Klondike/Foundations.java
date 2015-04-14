@@ -3,18 +3,15 @@ package Klondike;
 public class Foundations {
 
 	public Foundation get(int i) {
-		// TODO Auto-generated method stub
-		return null;
+		return new Foundation();
 	}
 
-	public Object size() {
-		// TODO Auto-generated method stub
-		return null;
+	public int size() {
+		return 0;
 	}
 
 	public int[] getFoundationsSizes() {
-		// TODO Auto-generated method stub
-		return null;
+		return new int[]{0};
 	}
 
 }

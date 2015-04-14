@@ -1,10 +1,18 @@
 package Klondike;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Deck {
 
+	List<Card> internalDeck;
+	
+	public Deck(){
+		internalDeck = new ArrayList<Card>();
+	}
+	
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return internalDeck.size();
 	}
 
 	public void addCardOnTop(Card card) {

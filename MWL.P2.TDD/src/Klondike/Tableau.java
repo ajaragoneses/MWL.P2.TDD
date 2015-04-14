@@ -3,18 +3,15 @@ package Klondike;
 public class Tableau {
 
 	public int size() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	public Card getCard(int i) {
-		// TODO Auto-generated method stub
-		return null;
+		return new Card(null, null, null);
 	}
 
 	public Card getTopCard() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Card(null, null, null);
 	}
 
 }

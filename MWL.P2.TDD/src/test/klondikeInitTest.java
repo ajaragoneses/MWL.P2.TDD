@@ -3,9 +3,9 @@ package test;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
+import Klondike.Card;
 import Klondike.Deck;
 import Klondike.Foundations;
 import Klondike.Tableau;
@@ -45,7 +45,7 @@ public class klondikeInitTest {
 	
 	@Test
 	public void NumberOfTableausTest(){
-		assertEquals(4, tableaus.size());
+		assertEquals(7, tableaus.size());
 	}
 	
 
@@ -69,7 +69,9 @@ public class klondikeInitTest {
 	public void TableausAllCardsButFirstCoveredTest(){
 		Tableau[] tableausArray = tableaus.getTableaus();
 		for(int i = 0; i < tableausArray.length ; i++){
-			assertTrue(tableausArray[i].getTopCard().isDiscovered());
+			Card c = tableausArray[i].getTopCard();
+			assertNotNull(c);
+			assertTrue(c.isDiscovered());
 		}
 	}
 	

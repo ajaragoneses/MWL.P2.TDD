@@ -22,18 +22,9 @@ public class WasteToDeckMoveTest {
 	public void init(){
 		waste = new Waste();
 		deck = new Deck();
-		
-		Card card_1 = new Card(Color.ROJO, Palo.ROMBOS, Valor.Q);
-		Card card_2 = new Card(Color.NEGRO, Palo.PICAS, Valor.TRES);
-		Card card_3 = new Card(Color.ROJO, Palo.CORAZONES, Valor.SIETE);
-		Card card_4 = new Card(Color.NEGRO, Palo.PICAS, Valor.K);
-		Card card_5 = new Card(Color.ROJO, Palo.ROMBOS, Valor.CUATRO);
-		
-		waste.addCardOnTop(card_5);
-		waste.addCardOnTop(card_4);
-		waste.addCardOnTop(card_3);
-		waste.addCardOnTop(card_2);
-		waste.addCardOnTop(card_1);
+		for(int i = 0; i < 18; i++){
+			deck.moveToWaste(waste);
+		}
 	}
 	
 	
@@ -56,7 +47,7 @@ public class WasteToDeckMoveTest {
 	@Test
 	public void DeckSizeAfterMoveTest(){
 		waste.moveToDeck(deck);
-		assertTrue(deck.size() == 5);
+		assertTrue(deck.size() == 52);
 	}
 	
 }

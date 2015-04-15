@@ -22,10 +22,15 @@ public class WasteToFoundationMoveTest {
 		foundations = new Foundations();
 		
 		Card card_1 = new Card(Color.ROJO, Palo.ROMBOS, Valor.TRES);
+		card_1.setDiscovered(true);
 		Card card_2 = new Card(Color.NEGRO, Palo.PICAS, Valor.TRES);
+		card_2.setDiscovered(true);
 		Card card_3 = new Card(Color.ROJO, Palo.CORAZONES, Valor.SIETE);
+		card_3.setDiscovered(true);
 		Card card_4 = new Card(Color.NEGRO, Palo.PICAS, Valor.K);
+		card_4.setDiscovered(true);
 		Card card_5 = new Card(Color.ROJO, Palo.ROMBOS, Valor.CUATRO);
+		card_5.setDiscovered(true);
 		
 		foundations.get(0).addTopCard(card_1);
 		foundations.get(1).addTopCard(card_2);

@@ -70,7 +70,6 @@ public class klondikeInitTest {
 		Tableau[] tableausArray = tableaus.getTableaus();
 		for(int i = 0; i < tableausArray.length ; i++){
 			Card c = tableausArray[i].getTopCard();
-			assertNotNull(c);
 			assertTrue(c.isDiscovered());
 		}
 	}
@@ -79,7 +78,7 @@ public class klondikeInitTest {
 	public void TableausFirstDiscoveredTest(){
 		Tableau[] tableausArray = tableaus.getTableaus();
 		for(int i = 0; i < tableausArray.length ; i++){
-			for(int j = 1; i < tableausArray[i].size(); j++){
+			for(int j = 1; j < tableausArray[i].size(); j++){
 				assertFalse(tableausArray[i].getCard(j).isDiscovered());
 			}
 		}

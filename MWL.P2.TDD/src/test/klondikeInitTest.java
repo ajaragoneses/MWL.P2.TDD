@@ -65,10 +65,20 @@ public class klondikeInitTest {
 	}
 	
 	@Test
-	public void TableausFirstDiscoveredTest(){
+	public void TableausAllCardsButFirstCoveredTest(){
 		Tableau[] tableausArray = tableaus.getTableaus();
 		for(int i = 0; i < tableausArray.length ; i++){
 			assertTrue(tableausArray[i].getTopCard().isDiscovered());
+		}
+	}
+	
+	@Test
+	public void TableausFirstDiscoveredTest(){
+		Tableau[] tableausArray = tableaus.getTableaus();
+		for(int i = 0; i < tableausArray.length ; i++){
+			for(int j = 1; i < tableausArray[i].size(); j++){
+				assertFalse(tableausArray[i].getCard(j).isDiscovered());
+			}
 		}
 	}
 	

@@ -1,45 +1,42 @@
 package Klondike;
 
+import java.util.ArrayList;
+
 public class Waste {
 
+	private ArrayList<Card> internalWaste;
+		
+	public Waste(){
+		internalWaste = new ArrayList<Card>();
+	}	
+	
 	public boolean isWasteGetCardPermited() {
-		// TODO Auto-generated method stub
-		return false;
+		return internalWaste.size() > 0;
 	}
 
-	public Object getTopCard() {
-		// TODO Auto-generated method stub
-		return null;
+	public Card getTopCard() {
+		return internalWaste.get(0);
 	}
 
-	public void moveTopToFoundation(Object object) {
-		// TODO Auto-generated method stub
-		
+	public void moveTopToFoundation(Foundation foundation) {
+		foundation.addTopCard(internalWaste.remove(0));
 	}
 
-	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int size(){
+		return internalWaste.size();
 	}
 
-	public void setTopCard(Card card_5) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void addCardOnTop(Card card_5) {
-		// TODO Auto-generated method stub
-		
+	public void addCardOnTop(Card card) {
+		internalWaste.add(0, card);		
 	}
 
 	public void moveToDeck(Deck deck) {
-		// TODO Auto-generated method stub
-		
+		int fin = internalWaste.size();
+		for(int i = 0; i < fin; i++){
+			deck.addCardOnTop(internalWaste.remove(0));
+		}
+		deck.shuffle();
 	}
 
-	public boolean isDeckGetCardsPermited() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 }

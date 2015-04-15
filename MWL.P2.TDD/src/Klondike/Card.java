@@ -2,10 +2,10 @@ package Klondike;
 
 public class Card {
 
-	Color color;
-	Palo palo;
-	Valor valor;
-	boolean descubierta;
+	private Color color;
+	private Palo palo;
+	private Valor valor;
+	private boolean descubierta;
 	
 	public Card(Color color, Palo palo, Valor valor) {
 		this.color = color;
@@ -44,5 +44,10 @@ public class Card {
 
 	public boolean isDiscovered(){
 		return descubierta;
+	}
+	
+	@Override
+	public String toString(){
+		return "["+ color + ","+palo+","+valor+","+descubierta+"]";
 	}
 }

@@ -1,17 +1,31 @@
 package Klondike;
 
+import java.util.ArrayList;
+
 public class Tableau {
 
+	private ArrayList<Card> internalTableau;
+	
+	public Tableau(){
+		internalTableau = new ArrayList<Card>();
+	}
+	
 	public int size() {
-		return 0;
+		return internalTableau.size();
 	}
 
 	public Card getCard(int i) {
-		return new Card(null, null, null);
+		if(internalTableau.size() <= 0) return null;
+		return internalTableau.get(i);
 	}
 
 	public Card getTopCard() {
-		return new Card(null, null, null);
+		if(internalTableau.size() <= 0) return null;
+		return internalTableau.remove(0);
+	}
+	
+	public void addCardOnTop(Card card) {
+		internalTableau.add(0, card);
 	}
 
 }

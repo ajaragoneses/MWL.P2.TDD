@@ -1,20 +1,28 @@
 package Klondike;
 
+import java.util.ArrayList;
+
 public class Foundation {
 
-	public boolean isMoveToFoundationPermited(Object topCard) {
-		// TODO Auto-generated method stub
-		return false;
+	private ArrayList<Card> internalFoundation;
+	
+	public Foundation(){
+		internalFoundation = new ArrayList<Card>();
+	}
+	
+	public boolean isMoveToFoundationPermited(Card card) {
+		if(!card.isDiscovered()) return false;
+		if(card.getPalo() != internalFoundation.get(0).getPalo()) return false;
+		if(internalFoundation.get(0).getValor().compareTo(card.getValor()) >= 0) return false;
+		return true;
 	}
 
-	public Object size() {
-		// TODO Auto-generated method stub
-		return null;
+	public int size() {
+		return internalFoundation.size();
 	}
 
-	public void setTopCard(Card card_1) {
-		// TODO Auto-generated method stub
-		
+	public void addTopCard(Card card) {
+		internalFoundation.add(0, card);
 	}
 
 }

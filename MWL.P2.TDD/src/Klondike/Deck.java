@@ -1,14 +1,21 @@
 package Klondike;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
 
 public class Deck {
 
-	List<Card> internalDeck;
+	private ArrayList<Card> internalDeck;
 	
 	public Deck(){
 		internalDeck = new ArrayList<Card>();
+		for(int i = 0; i < Valor.values().length; i++){
+			internalDeck.add(new Card(Color.ROJO, Palo.CORAZONES, Valor.values()[i]));
+			internalDeck.add(new Card(Color.NEGRO, Palo.TREBOLES, Valor.values()[i]));
+			internalDeck.add(new Card(Color.ROJO, Palo.ROMBOS, Valor.values()[i]));
+			internalDeck.add(new Card(Color.NEGRO, Palo.PICAS, Valor.values()[i]));
+		}
+		Collections.shuffle(internalDeck);
 	}
 	
 	public int size() {
@@ -16,16 +23,27 @@ public class Deck {
 	}
 
 	public void addCardOnTop(Card card) {
-		// TODO Auto-generated method stub
+		internalDeck.add(0, card);
 	}
 
 	public void moveToWaste(Waste waste) {
-		// TODO Auto-generated method stub
+		for(int i = 0; i < 3; i++){
+			if(internalDeck.size() <= 0) break;
+			waste.addCardOnTop(internalDeck.remove(0));
+		}
 	}
 
 	public void initTableaus(Tableaus tableaus) {
-		// TODO Auto-generated method stub
-		
+		for(int i = 0; i < tableaus.getTableaus().length; i++){
+			for(int j = 0; j <= i; j++){
+				tableaus.getTableau(i).addCardOnTop(internalDeck.remove(0));
+			}
+			tableaus.getTableau(i).getCard(0).setDiscovered(true);
+		}
+	}
+
+	public void shuffle() {
+		Collections.shuffle(internalDeck);
 	}
 
 }

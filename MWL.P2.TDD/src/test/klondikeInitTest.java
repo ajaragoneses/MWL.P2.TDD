@@ -25,6 +25,7 @@ public class klondikeInitTest {
 		waste = new Waste();
 		foundations = new Foundations();
 		tableaus = new Tableaus();
+		deck.initTableaus(tableaus);
 	}
 
 	@Test

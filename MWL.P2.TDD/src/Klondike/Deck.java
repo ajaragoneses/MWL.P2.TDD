@@ -23,4 +23,9 @@ public class Deck {
 		// TODO Auto-generated method stub
 	}
 
+	public void initTableaus(Tableaus tableaus) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

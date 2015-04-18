@@ -6,6 +6,7 @@ import java.util.Collections;
 public class Deck {
 
 	private ArrayList<Card> internalDeck;
+	static final int MAXIMUM_CARDS_MOVE_TO_WASTE = 3;
 	
 	public Deck(){
 		internalDeck = new ArrayList<Card>();
@@ -27,7 +28,7 @@ public class Deck {
 	}
 
 	public void moveToWaste(Waste waste) {
-		for(int i = 0; i < 3; i++){
+		for(int i = 0; i < MAXIMUM_CARDS_MOVE_TO_WASTE; i++){
 			if(internalDeck.size() <= 0) break;
 			waste.addCardOnTop(internalDeck.remove(0));
 		}

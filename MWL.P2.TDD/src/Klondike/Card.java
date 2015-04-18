@@ -54,4 +54,8 @@ public class Card {
 	public String toString(){
 		return "["+ color + ","+palo+","+valor+","+descubierta+"]";
 	}
+
+	public boolean greatherOrEqualThan(Card card) {
+		return valor.compareTo(card.getValor()) >= 0;
+	}
 }

@@ -1,6 +1,6 @@
 package Klondike;
 
 public enum Palo {
-	NULO, ROMBOS, PICAS, CORAZONES, TREBOLES
+	ROMBOS, PICAS, CORAZONES, TREBOLES, NULO
 
 }

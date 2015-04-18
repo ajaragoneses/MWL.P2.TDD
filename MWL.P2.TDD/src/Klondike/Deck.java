@@ -10,7 +10,7 @@ public class Deck {
 	
 	public Deck(){
 		internalDeck = new ArrayList<Card>();
-		for(int i = 0; i < Valor.values().length; i++){
+		for(int i = 0; i < Valor.values().length-1; i++){
 			internalDeck.add(new Card(Color.ROJO, Palo.CORAZONES, Valor.values()[i]));
 			internalDeck.add(new Card(Color.NEGRO, Palo.TREBOLES, Valor.values()[i]));
 			internalDeck.add(new Card(Color.ROJO, Palo.ROMBOS, Valor.values()[i]));

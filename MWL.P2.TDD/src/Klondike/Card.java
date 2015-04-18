@@ -46,6 +46,10 @@ public class Card {
 		return descubierta;
 	}
 	
+	public boolean equalPalo(Card card){
+		return this.palo == card.getPalo();
+	}
+	
 	@Override
 	public String toString(){
 		return "["+ color + ","+palo+","+valor+","+descubierta+"]";

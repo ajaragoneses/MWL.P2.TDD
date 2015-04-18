@@ -12,7 +12,7 @@ public class Foundation {
 	
 	public boolean isMoveToFoundationPermited(Card card) {
 		if(!card.isDiscovered()) return false;
-		if(card.getPalo() != internalFoundation.get(0).getPalo()) return false;
+		if(card.equalPalo(internalFoundation.get(0))) return false;
 		if(internalFoundation.get(0).getValor().compareTo(card.getValor()) >= 0) return false;
 		return true;
 	}

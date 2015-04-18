@@ -5,10 +5,11 @@ import java.util.ArrayList;
 public class Tableaus {
 
 	private ArrayList<Tableau> internalTableaus;
+	static final int TABLEAUS_SIZE = 7;
 	
 	public Tableaus(){
 		internalTableaus = new ArrayList<Tableau>();
-		for(int i = 0; i < 7; i++){
+		for(int i = 0; i < TABLEAUS_SIZE; i++){
 			internalTableaus.add(new Tableau());
 		}
 	}
@@ -18,8 +19,8 @@ public class Tableaus {
 	}
 
 	public int[] getTableausSizes() {
-		int[] retValues = new int[7];
-		for(int i = 0; i < 7; i++){
+		int[] retValues = new int[TABLEAUS_SIZE];
+		for(int i = 0; i < TABLEAUS_SIZE; i++){
 			retValues[i] = internalTableaus.get(i).size();
 		}
 		return retValues;

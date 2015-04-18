@@ -2,10 +2,10 @@ package Klondike;
 
 public class Card {
 
-	private Color color;
-	private Palo palo;
-	private Valor valor;
-	private boolean descubierta;
+	protected Color color;
+	protected Palo palo;
+	protected Valor valor;
+	protected boolean descubierta;
 	
 	public Card(Color color, Palo palo, Valor valor) {
 		this.color = color;
